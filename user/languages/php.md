@@ -26,7 +26,7 @@ php:
   - '5.6'
   - '7.0'
   - '7.1'
-  - hhvm
+  - hhvm # on Trusty only
   - nightly
 ```
 
@@ -37,7 +37,7 @@ The previous example uses `phpunit`, the default build script, to build against 
 - 5.6.x
 - 7.0.x
 - 7.1.x
-- hhvm
+- hhvm # on Trusty only
 - nightly
 
 which are specified using aliases for the "most recent x.y.z release" provided on Travis CI of any given line. For a full listing of the supported versions see [About Travis CI Environment](/user/ci-environment/).
@@ -48,21 +48,12 @@ You can see an [example of version number aliases](https://github.com/travis-ci/
 
 ### HHVM versions
 
-Travis CI can test your PHP applications with HHVM.
+Travis CI can test your PHP applications with HHVM on Ubuntu Trusty.
 
 Without specifying further, the latest version of HHVM available for the Ubuntu release
 your job is running on is used.
 
 In addition, depending on the Ubuntu release, you can test with more HHVM versions.
-
-#### HHVM versions on Precise
-
-```yaml
-language: php
-php:
-  - hhvm-3.3
-  - hhvm-3.6
-```
 
 #### HHVM versions on Trusty
 
